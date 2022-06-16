@@ -7,13 +7,17 @@
     <title>Cervejaria Dela</title>
     <link rel="stylesheet" href="/main.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
     <!-- Navbar -->
     <header class="header">
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-            <div class="container-fluid">
+            <div class="container container-fluid">
                 <a class="navbar-brand" href="#">Logo</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -24,10 +28,21 @@
                             <a class="nav-link active" aria-current="page" href="#quemsomos">Quem Somos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#nossascervejas">Nossas Cervejas</a>
+                            <a class="nav-link active" aria-current="page" href="#cervejas">Cervejas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#gallery">Fale Conosco</a>
+                            <a class="nav-link active" aria-current="page" href="#cervejaria">Cervejaria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#galeria">Galeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#contact">Fale Conosco</a>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                Acessar
+                            </button>
                         </li>
                     </ul>
                 </div>
@@ -36,47 +51,68 @@
     </header>
     <!-- //Navbar -->
 
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Acessar painel administrativo</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            ...
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+        </div>
+        </div>
+    </div>
 
     <!-- Quem somos -->
 
 
     <!-- Nossas cervejas -->
-    <div class="container mt-4 mb-4 bg-light">
-        <div class="row mt-4">
-            <div class="col-md-8">
-                <h2>Imagem 1</h2>
+    <div class="mb-4 bg-dark" id="cervejas">
+        <div class="container">
+            <h1 class="text-center pt-3 mb-3 media text-white">Nossas cervejas</h1>
+        <div class="row col-lg-12 mx-auto text-center">
+            <div class="col-md-8 text-white">
+                <h2>Lager</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus quos fugit quas asperiores cum error, neque sequi velit mollitia excepturi aliquam debitis rem vel autem possimus, dicta. Non, quasi, quod!</p>
             </div>
-            <div class="col-md-4 border">
-                <img class="img-fluid rounded img-thumbnail" src="assets/photo-4.jpeg" alt="">
+            <div class="col-md-4  mx-auto">
+                <img class="img-fluid rounded" src="assets/photo-4.jpeg" alt="">
             </div>
         </div>
 
-        <div class="row mt-4">
-            <div class="col-md-4 border">
-                <img class="img-fluid rounded img-thumbnail" src="assets/photo-5.jpeg" alt="">
+        <div class="row mt-5 text-white text-center">
+            <div class="col-md-4 order-img">
+                <img class="img-fluid rounded" src="assets/photo-5.jpeg" alt="">
             </div>
-            <div class="col-md-8">
-                <h2>Imagem 1</h2>
+            <div class="col-md-8 order-text">
+                <h2>Ipa</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus quos fugit quas asperiores cum error, neque sequi velit mollitia excepturi aliquam debitis rem vel autem possimus, dicta. Non, quasi, quod!</p>
             </div>
         </div>
 
-        <div class="row mt-4">
+        <div class="row pb-4 mt-5 text-white text-center">
             <div class="col-md-8">
-                <h2>Imagem 1</h2>
+                <h2>Weiss</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus quos fugit quas asperiores cum error, neque sequi velit mollitia excepturi aliquam debitis rem vel autem possimus, dicta. Non, quasi, quod!</p>
             </div>
-            <div class="col-md-4 border">
-                <img class="img-fluid rounded img-thumbnail" src="assets/photo-6.jpeg" alt="">
+            <div class="col-md-4">
+                <img class="img-fluid rounded" src="assets/photo-6.jpeg" alt="">
             </div>
+        </div>
         </div>
     </div>
     <!-- //Nossas cervejas-->
 
     <!-- Video -->
-    <div class="container">
-        <h1 class="text-center mt-3 mb-3">Conheça nossa cervejaria</h1>
+    <div class="container" id="cervejaria">
+        <h1 class="text-center mt-3 mb-3 media">Conheça nossa cervejaria</h1>
         <div class="row d-flex justify-content-center mt-4 mb-4">
             <div class="col-md-6">
                 <h4 class="mt-2 mb-2">Informações sobre o vídeo</h4>
@@ -91,7 +127,7 @@
 
 
     <!-- Galeria -->
-    <div class="container mt-4 mb-4" id="gallery">
+    <div class="container mt-4 mb-4" id="galeria">
         <h1 class="text-center mt-3 mb-3">Galeria</h1>
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -192,4 +228,6 @@
     <!-- //Footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-</body></html>
+</body>
+
+</html>

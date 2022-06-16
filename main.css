@@ -1,6 +1,38 @@
-/*Nossas cervejas*/
+body{
+    overflow-x: hidden;
+}
 
+/* Navbar */
+.navbar{
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+/*Nossas cervejas*/
+@media screen and (max-width: 567px){
+    .order-text{
+        order: 1;
+    }
+    .order-img{
+        order: 2;
+    }
+}
 /*//Nossas cervejas*/
+
+/* Conheça nossa cervejaria */
+
+@media screen and (max-width: 567px){
+    .container{
+        text-align: center;
+    }
+    iframe{
+        width: auto;
+        height: auto;
+    }
+    .img-fluid{
+        width: 80%;
+    }
+}
+
+/* //Conheça nossa cervejaria */
 
 /*Galeria*/
 @media screen and (min-width: 568px) {
