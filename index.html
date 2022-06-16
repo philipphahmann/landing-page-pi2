@@ -5,12 +5,113 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cervejaria Dela</title>
-    <link rel="stylesheet" href="/css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
+
+        body{
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6, p, a{
+            font-family: 'Joan', serif;
+        }
+
+        /* Navbar */
+        .navbar{
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+
+        /*Nossas cervejas*/
+        @media screen and (max-width: 567px){
+            .order-text{
+                order: 1;
+            }
+            .order-img{
+                order: 2;
+            }
+        }
+
+        /* Conheça nossa cervejaria */
+
+        @media screen and (max-width: 567px){
+            .container{
+                text-align: center;
+            }
+            iframe{
+                width: auto;
+                height: auto;
+            }
+            .img-fluid{
+                width: 80%;
+            }
+        }
+
+        /*Galeria*/
+        @media screen and (min-width: 568px) {
+            .cards-wrapper {
+                display: flex;
+            }
+
+            .card {
+                margin: 0 0.5em;
+                width: calc(100%/3);
+                border: none;
+                box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+            }
+        }
+
+        @media screen and (max-width: 567px) {
+            .card:not(:first-child) {
+                display: none;
+            }
+
+            .card {
+                border: none;
+                box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+            }
+        }
+
+        /*Newsletter*/
+        .newsletter {
+            padding: 80px 0px;
+            background-color: #19beda;
+        }
+
+        .newsletter .content {
+            max-width: 650px;
+            margin: 0 auto;
+            text-align: center
+        }
+
+        .newsletter .content h2 {
+            margin-bottom: 40px;
+            color: #243c4f;
+        }
+
+        .newsletter .content .form-control {
+            height: 50px;
+            border-color: #fff;
+            border-radius: 0;
+        }
+
+        .newsletter .content .form-control:focus {
+            box-shadow: none;
+            border: 2px solid #243c4f;
+        }
+
+        .newsletter .content .btn {
+            min-height: 50px;
+            border-radius: 0;
+            background-color: #243c4f;
+            color: #fff;
+            font-weight: 600;
+        }
+    </style>
 </head>
 
 <body>
@@ -40,7 +141,7 @@
                             <a class="nav-link active" aria-current="page" href="#contact">Fale Conosco</a>
                         </li>
                         <li class="nav-item">
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                 Acessar
                             </button>
                         </li>
