@@ -1,369 +1,605 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Cervejaria Dela</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+			crossorigin="anonymous"
+		/>
+        <!-- 0. Owl Carousel Min.css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cervejaria Dela</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
+        <!-- 1. Owl Carousel Theme.css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        body{
-            overflow-x: hidden;
-        }
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/assets/favicon/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/assets/favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/assets/favicon/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="/site.webmanifest" />
 
-        h1, h2, h3, h4, h5, h6, p, a{
-            font-family: 'Joan', serif;
-        }
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Joan&display=swap");
+            @import url('https://fonts.googleapis.com/css2?family=Stoke:wght@300;400&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
 
-        /* Navbar */
-        .navbar{
-            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-        }
+			body {
+				overflow-x: hidden;
+			}
 
-        /*Nossas cervejas*/
-        @media screen and (max-width: 567px){
-            .order-text{
-                order: 1;
-            }
-            .order-img{
-                order: 2;
-            }
-        }
+			h1{
+				font-family: "Stoke", serif;
+			}
 
-        /* Conheça nossa cervejaria */
-
-        @media screen and (max-width: 567px){
-            .container{
-                text-align: center;
-            }
-            iframe{
-                width: auto;
-                height: auto;
-            }
-            .img-fluid{
-                width: 80%;
-            }
-        }
-
-        /*Galeria*/
-        @media screen and (min-width: 568px) {
-            .cards-wrapper {
-                display: flex;
+            .display-3, .display-5, .display-6{
+                font-family: "Caveat", cursive;
             }
 
-            .card {
-                margin: 0 0.5em;
-                width: calc(100%/3);
-                border: none;
-                box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
-            }
-        }
+			/* Navbar */
+			.navbar {
+				box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+			}
 
-        @media screen and (max-width: 567px) {
-            .card:not(:first-child) {
-                display: none;
-            }
+			/*Nossas cervejas*/
+			@media screen and (max-width: 567px) {
+				.order-text {
+					order: 1;
+				}
+				.order-img {
+					order: 2;
+				}
+			}
 
-            .card {
-                border: none;
-                box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
-            }
-        }
+			/* Conheça nossa cervejaria */
 
-        /*Newsletter*/
-        .newsletter {
-            padding: 80px 0px;
-            background-color: #19beda;
-        }
+			@media screen and (max-width: 567px) {
+				.container {
+					text-align: center;
+				}
+				iframe {
+					width: auto;
+					height: auto;
+				}
+				.img-fluid {
+					width: 80%;
+				}
+			}
 
-        .newsletter .content {
-            max-width: 650px;
-            margin: 0 auto;
-            text-align: center
-        }
+			/*Galeria*/
+			@media screen and (min-width: 568px) {
+				.cards-wrapper {
+					display: flex;
+				}
 
-        .newsletter .content h2 {
-            margin-bottom: 40px;
-            color: #243c4f;
-        }
+				.card {
+					margin: 0 0.5em;
+					width: calc(100% / 3);
+					border: none;
+					box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+				}
+			}
 
-        .newsletter .content .form-control {
-            height: 50px;
-            border-color: #fff;
-            border-radius: 0;
-        }
+			@media screen and (max-width: 567px) {
+				.card:not(:first-child) {
+					display: none;
+				}
 
-        .newsletter .content .form-control:focus {
-            box-shadow: none;
-            border: 2px solid #243c4f;
-        }
+				.card {
+					border: none;
+					box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+				}
+			}
 
-        .newsletter .content .btn {
-            min-height: 50px;
-            border-radius: 0;
-            background-color: #243c4f;
-            color: #fff;
-            font-weight: 600;
-        }
-    </style>
-</head>
+			/*Newsletter*/
+			.newsletter {
+				padding: 80px 0px;
+				background-color: #19beda;
+			}
 
-<body>
-    <!-- Navbar -->
-    <header class="header">
-        <nav class="navbar navbar-expand-lg bg-dark navbar-dark ">
-            <div class="container container-fluid">
-                <a class="navbar-brand" href="#">Logo</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#quemsomos">Quem Somos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#cervejas">Cervejas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#cervejaria">Cervejaria</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#galeria">Galeria</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#contact">Fale Conosco</a>
-                        </li>
-                        <li class="nav-item">
-                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                Acessar
-                            </button>
-                        </li>
-                    </ul>
+			.newsletter .content {
+				max-width: 650px;
+				margin: 0 auto;
+				text-align: center;
+			}
+
+			.newsletter .content h2 {
+				margin-bottom: 40px;
+				color: #243c4f;
+			}
+
+			.newsletter .content .form-control {
+				height: 50px;
+				border-color: #fff;
+				border-radius: 0;
+			}
+
+			.newsletter .content .form-control:focus {
+				box-shadow: none;
+				border: 2px solid #243c4f;
+			}
+
+			.newsletter .content .btn {
+				min-height: 50px;
+				border-radius: 0;
+				background-color: #243c4f;
+				color: #fff;
+				font-weight: 600;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- Navbar -->
+		<header class="header">
+			<nav class="navbar navbar-expand-lg bg-light navbar-light">
+				<div class="container container-fluid">
+					<a class="navbar-brand" href="#">
+                        <img style="height: 40px" src="/assets/logo.png" alt="">
+                    </a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarNav"
+						aria-controls="navbarNav"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav ms-auto">
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="#quemsomos"
+									>Quem Somos</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="#cervejas"
+									>Cervejas</a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link active"
+									aria-current="page"
+									href="#cervejaria"
+									>Cervejaria</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="#galeria"
+									>Galeria</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="#contact"
+									>Fale Conosco</a
+								>
+							</li>
+							<li class="nav-item">
+								<button
+									type="button"
+									class="btn btn-primary"
+									data-bs-toggle="modal"
+									data-bs-target="#staticBackdrop"
+								>
+									Acessar
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<!-- Modal -->
+		<div
+			class="modal fade"
+			id="staticBackdrop"
+			data-bs-backdrop="static"
+			data-bs-keyboard="false"
+			tabindex="-1"
+			aria-labelledby="staticBackdropLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="staticBackdropLabel">
+							Acessar painel administrativo
+						</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="modal-body">
+						<form class="needs-validation" novalidate>
+							<div class="form-floating mb-3">
+								<input
+									type="email"
+									class="form-control"
+									id="floatingInput"
+									required
+								/>
+								<label for="floatingInput" class="form-label"
+									>Digite seu email</label
+								>
+								<div class="invalid-feedback">
+									Por favor, digite um email válido!
+								</div>
+							</div>
+							<div class="form-floating">
+								<input
+									type="password"
+									class="form-control"
+									id="floatingPassword"
+									required
+								/>
+								<label for="floatingPassword">Digite sua senha</label>
+								<div class="invalid-feedback mb-1">
+									Por favor, digite uma senha válida!
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button
+									type="button"
+									class="btn btn-secondary"
+									data-bs-dismiss="modal"
+								>
+									Fechar
+								</button>
+								<button type="submit" class="btn btn-primary">Confirmar</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Quem somos -->
+
+		<!-- Nossas cervejas -->
+		<div class="" id="cervejas">
+			<div class="bg-dark">
+				<div class="container">
+					<h1
+						class="text-center text-white mb-0 py-4 display-4 border-bottom border-white"
+					>
+						NOSSAS CERVEJAS
+					</h1>
+				</div>
+			</div>
+            <!-- LAGER -->
+			<section class="bg-dark">
+                <div class="container p-4 p-md-5">
+                    <div class="row text-center mx-auto">
+                        <div class="col-md-8 text-white">
+                            <p class="display-5">LAGER</p>
+                            <p class="display-6">A força única!</h3>
+                            <p class="lead">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Repellendus quos fugit quas asperiores cum error, neque sequi velit
+                                mollitia excepturi aliquam debitis rem vel autem possimus, dicta.
+                                Non, quasi, quod!
+                            </p>
+                        </div>
+                        <div class="col-md-4 mx-auto">
+                            <img class="img-fluid rounded" src="assets/photo-4.jpeg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- IPA -->
+			<section class="bg-light">
+                <div class="container p-4 p-md-5">
+                    <div class="row text-black text-center mx-auto">
+                        <div class="col-md-4 order-img">
+                            <img class="img-fluid rounded" src="assets/photo-5.jpeg" alt="" />
+                        </div>
+                        <div class="col-md-8 order-text">
+                            <p class="display-5">IPA</p>
+                            <p class="display-6">A força marcante!</p>
+                            <p class="lead">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Repellendus quos fugit quas asperiores cum error, neque sequi
+                                velit mollitia excepturi aliquam debitis rem vel autem possimus,
+                                dicta. Non, quasi, quod!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- WEISS -->
+			<section class="bg-dark">
+                <div class="container p-4 p-md-5">
+                    <div class="row text-white text-center mx-auto">
+                        <div class="col-md-8">
+                            <p class="display-5">WEISS</p>
+                            <p class="display-6">A força potente!</p>
+                            <p class="lead">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Repellendus quos fugit quas asperiores cum error, neque sequi velit
+                                mollitia excepturi aliquam debitis rem vel autem possimus, dicta.
+                                Non, quasi, quod!
+                            </p>
+                        </div>
+                        <div class="col-md-4">
+                            <img class="img-fluid rounded" src="assets/photo-6.jpeg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+		</div>
+
+		<!-- Video -->
+        <section class="bg-light">
+            <div class="container" id="cervejaria">
+                        <h1 class="text-center mb-0 py-4 display-4 border-bottom border-dark">
+                            <strong>NOSSA CERVEJARIA</strong>
+                        </h1>
+                <div class="row text-center mx-auto bg-light p-4">
+                    <div class="col-md-6">
+                        <p class="lead">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat
+                            quasi nobis odit quam mollitia sequi hic soluta accusamus
+                            perspiciatis, cum tenetur aperiam quisquam vitae tempora impedit
+                            earum inventore vel quod!
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/TBtiqILCqZ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    <!-- //Navbar -->
+        </section>
 
-    <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Acessar painel administrativo</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-                <div class="modal-body">
-                    <form class="needs-validation" novalidate>
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingInput" required>
-                            <label for="floatingInput" class="form-label">Digite seu email</label>
-                            <div class="invalid-feedback">
-                                Por favor, digite um email válido!
+        <!-- Galeria -->
+        <section class="bg-dark">
+            <div class="container">
+                <div class="bg-dark">
+                    <div class="container">
+                        <h1
+                            class="text-center mb-0 py-4 text-white display-4 border-bottom border-white"
+                        >
+                            <strong>GALERIA</strong>
+                        </h1>
+                    </div>
+                </div>
+                <div class="row border-white">
+                    <div class="owl-carousel owl-theme p-3">
+                        <div class="item">
+                            <div class="card w-100">
+                                <img class="img-fluid" src="/assets/photo-1.jpeg" class="card-img-top" alt="">
                             </div>
                         </div>
+                        <div class="item">
+                            <div class="card w-100">
+                                <img src="/assets/photo-2.jpeg" class="card-img-top" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card w-100">
+                                <img src="/assets/photo-3.jpeg" class="card-img-top" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card w-100">
+                                <img src="/assets/photo-4.jpeg" class="card-img-top" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card w-100">
+                                <img src="/assets/photo-5.jpeg" class="card-img-top" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card w-100">
+                                <img src="/assets/photo-6.jpeg" class="card-img-top" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+		<!-- Fale conosco -->
+        <section class="bg-light">
+             <div class="container">
+                <div class="text-center">
+                    <h1
+                    class="text-center mb-0 py-4 display-4 border-bottom border-dark"
+                >
+                    <strong>FALE CONOSCO</strong>
+                </h1>
+                </div>
+			<div class="row">
+				<div class="col-lg-6 p-4 bg-light">
+                    <h2 class="h6 text-center">
+                        ENVIE SUA DÚVIDA
+                    </h2>
+                    <form class="bg-light rounded" action="">
+						<div class="form-floating mb-3">
+							<input
+								type="email"
+								class="form-control"
+								id="inputEmail"
+								placeholder="name@example.com"
+							/>
+							<label for="inputEmail">Email</label>
+						</div>
+						<div class="form-floating">
+							<input
+								type="password"
+								class="form-control"
+								id="inputSenha"
+								placeholder="senha"
+							/>
+							<label for="inputSenha">Nome</label>
+						</div>
                         <div class="form-floating">
-                            <input type="password" class="form-control" id="floatingPassword" required>
-                            <label for="floatingPassword">Digite sua senha</label>
-                            <div class="invalid-feedback mb-1">
-                                Por favor, digite uma senha válida!
-                            </div>
+                            <textarea class="form-control mt-3" placeholder="Leave a comment here" id="inputMensagem" style="height: 150px"></textarea>
+                            <label for="inputMensagem">Mensagem</label>
+                          </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-secondary mt-3">Enviar Mensagem</button>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                            <button type="submit" class="btn btn-primary">Confirmar</button>
+					</form>
+				</div>
+                <div class="col-lg-6 p-4">
+                    <h2 class="h6 text-center">
+                        NOSSO ENDEREÇO
+                    </h2>
+                    <iframe class="col-sm w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3709.8146507461593!2d-46.8826528846986!3d-21.593156885695308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b7cd76ba5d6039%3A0xb8bd5b1a5d5d5b1e!2sDela%20Cervejaria!5e0!3m2!1sen!2sbr!4v1656117189510!5m2!1sen!2sbr"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <div class="row text-center py-4">
+                        <div class="col">
+                            <h2 class="h6">DADOS DE CONTATO</h2>
+                            <ul class="list-unstyled text-secondary">
+                                <li>cervejariadela@dela.com</li>
+                                <li>21 99999-9999</li>
+                                <li>De Seg. à Sex. das 8h às 18h</li>
+                            </ul>
                         </div>
-                    </form>
+                        <div class="col">
+                            <h4 class="h6">REDES SOCIAIS</h4>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a
+                                        href="https://www.facebook.com/pages/category/Product-service/Dela-Cervejaria-104135071119257/"
+                                        class="btn btn-sm btn-outline-secondary d-block mb-2"
+                                        >Facebook</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.instagram.com/cervejariadela/?hl=en"
+                                        class="btn btn-sm btn-outline-secondary d-block mb-2"
+                                        >Instagram</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.youtube.com/watch?v=TBtiqILCqZ8"
+                                        class="btn btn-sm btn-outline-secondary d-block mb-2"
+                                        >Youtube</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
                 </div>
-        </div>
-        </div>
-    </div>
+			</div>
+             </div>
+		</section>
 
-    <!-- Quem somos -->
+		<!-- Newsletter -->
+		<section class="newsletter">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="content">
+							<h2>Inscreva-se para receber as novidades!</h2>
+							<div class="input-group">
+								<input
+									type="email"
+									class="form-control"
+									id="floatingInput"
+									placeholder="Coloque o seu melhor email"
+								/>
+								<span class="input-group-btn bg-dark rounded">
+									<button class="btn" type="submit">Inscrever</button>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
+		<!-- Footer -->
+		<footer class="bg-dark">
+			<div class="pt-3 pb-3 text-center">
+				<span class="text-white"
+					>Cervejaria Dela₢ - Todos os direitos reservados</span
+				>
+			</div>
+		</footer>
 
-    <!-- Nossas cervejas -->
-    <div class="mb-4 bg-dark" id="cervejas">
-        <div class="container">
-            <h1 class="text-center pt-3 mb-3 media text-white">Nossas cervejas</h1>
-        <div class="row col-lg-12 mx-auto text-center">
-            <div class="col-md-8 text-white">
-                <h2>Lager</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus quos fugit quas asperiores cum error, neque sequi velit mollitia excepturi aliquam debitis rem vel autem possimus, dicta. Non, quasi, quod!</p>
-            </div>
-            <div class="col-md-4  mx-auto">
-                <img class="img-fluid rounded" src="assets/photo-4.jpeg" alt="">
-            </div>
-        </div>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+			crossorigin="anonymous"
+		></script>
 
-        <div class="row mt-5 text-white text-center">
-            <div class="col-md-4 order-img">
-                <img class="img-fluid rounded" src="assets/photo-5.jpeg" alt="">
-            </div>
-            <div class="col-md-8 order-text">
-                <h2>Ipa</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus quos fugit quas asperiores cum error, neque sequi velit mollitia excepturi aliquam debitis rem vel autem possimus, dicta. Non, quasi, quod!</p>
-            </div>
-        </div>
+        <!-- 1. Owl Carousel Jquery.min.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-        <div class="row pb-4 mt-5 text-white text-center">
-            <div class="col-md-8">
-                <h2>Weiss</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus quos fugit quas asperiores cum error, neque sequi velit mollitia excepturi aliquam debitis rem vel autem possimus, dicta. Non, quasi, quod!</p>
-            </div>
-            <div class="col-md-4">
-                <img class="img-fluid rounded" src="assets/photo-6.jpeg" alt="">
-            </div>
-        </div>
-        </div>
-    </div>
-    <!-- //Nossas cervejas-->
+        <!-- 0. Owl Carousel Min.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- Video -->
-    <div class="container" id="cervejaria">
-        <h1 class="text-center mt-3 mb-3 media">Conheça nossa cervejaria</h1>
-        <div class="row d-flex justify-content-center mt-4 mb-4">
-            <div class="col-md-6">
-                <h4 class="mt-2 mb-2">Informações sobre o vídeo</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quasi nobis odit quam mollitia sequi hic soluta accusamus perspiciatis, cum tenetur aperiam quisquam vitae tempora impedit earum inventore vel quod!</p>
-            </div>
-            <div class="col-md-6">
-                <iframe height="320px" width="550" src="https://www.youtube.com/embed/WsEv01p3GXU?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-    <!-- //Video -->
+        <!-- 2. Owl Carousel init -->
+		<script>
+			(function () {
+				"use strict";
 
+				var forms = document.querySelectorAll(".needs-validation");
 
-    <!-- Galeria -->
-    <div class="container mt-4 mb-4" id="galeria">
-        <h1 class="text-center mt-3 mb-3">Galeria</h1>
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="cards-wrapper">
-                        <div class="card">
-                            <img src="assets/photo-1.jpeg" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="assets/photo-2.jpeg" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="assets/photo-3.jpeg" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="cards-wrapper">
-                        <div class="card">
-                            <img src="assets/photo-4.jpeg" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="assets/photo-5.jpeg" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="assets/photo-6.jpeg" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
-    <!-- //Galeria -->
+				Array.prototype.slice.call(forms).forEach(function (form) {
+					form.addEventListener(
+						"submit",
+						function (event) {
+							if (!form.checkValidity()) {
+								event.preventDefault();
+								event.stopPropagation();
+							}
 
+							form.classList.add("was-validated");
+						},
+						false
+					);
+				});
+			})();
 
-    <!-- Newsletter -->
-    <section class="newsletter">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="content">
-                        <h2>Inscreva-se para receber as novidades!</h2>
-                        <div class="input-group">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="Coloque o seu melhor email">
-                            <span class="input-group-btn">
-                                <button class="btn" type="submit">Inscrever</button>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- //Newsletter -->
-
-
-    <!-- Fale conosco -->
-
-
-    <!-- Footer -->
-    <footer class="bg-dark">
-        <div class="pt-3 pb-3 text-center">
-            <span class="text-white">Cervejaria Dela₢ - Todos os direitos reservados</span>
-        </div>
-    </footer>
-    <!-- //Footer -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
-    <script>
-        (function () {
-            'use strict'
-
-            var forms = document.querySelectorAll('.needs-validation')
-
-            Array.prototype.slice.call(forms)
-                .forEach(function (form) {
-                    form.addEventListener('submit', function (event) {
-                        if (!form.checkValidity()) {
-                            event.preventDefault()
-                            event.stopPropagation()
-                        }
-
-                        form.classList.add('was-validated')
-                    }, false)
-                })
-        })()
-    </script>
-</body>
-
+            $('.owl-carousel').owlCarousel({
+                loop:true,
+                margin:10,
+                nav:false,
+                dots:false,
+                autoplay: true,
+                smartSpeed: 300,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:3
+                    }
+                }
+            })
+		</script>
+	</body>
 </html>
